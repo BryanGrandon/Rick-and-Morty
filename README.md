@@ -1,50 +1,27 @@
-# React + TypeScript + Vite
+# Rick and Morty
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This website will show all the characters from the Rick and Morty series showing detailed information and more.
 
-Currently, two official plugins are available:
+## ⚙️ Function of the website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Technologies and tools used
 
-## Expanding the ESLint configuration
+- [ReactJS](https://es.react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [The Rick and Morty API](https://rickandmortyapi.com/)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Dependencies
 
-- Configure the top-level `parserOptions` property like this:
+- [sass](https://sass-lang.com/)
+- [React-icons](https://www.npmjs.com/package/react-icons)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 📊 Project status
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+| Status         | Start date | End date |
+| -------------- | ---------- | -------- |
+| ⌛ In progress | 2024-10-15 |          |
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## 🌐 [Website]()
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+<!-- <img src="./src/assets/website.png" alt="website" width="900px" /> -->
