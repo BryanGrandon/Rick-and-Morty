@@ -1,0 +1,23 @@
+@use "./base/reset-styles";
+@use "./base/typography";
+@use "./base/base";
+
+@use "./utilities/mixin" as *;
+@use "./utilities/variables" as *;
+
+body {
+  background-size: cover;
+  color: $white;
+  min-height: 200vh;
+}
+
+.bg-shadow {
+  background-color: #000000bd;
+  min-height: 100vh;
+}
+
+.default-size {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
