@@ -1,0 +1,9 @@
+@use "../utilities/mixin" as *;
+@use "../utilities/variables" as *;
+
+.main-article {
+  @include default-size();
+  border: 1px solid #f00;
+  display: grid;
+  grid-template-columns: 20rem 1fr;
+}
