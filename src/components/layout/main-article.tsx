@@ -1,6 +1,9 @@
 // import React from "react";
 
+import { useSeriesContext } from "../../context/series-context";
+
 const MainArticle = () => {
+  const { characters } = useSeriesContext();
   return (
     <main className="main-article">
       <article>
@@ -8,7 +11,9 @@ const MainArticle = () => {
       </article>
 
       <article>
-        <h2>List</h2>
+        {characters.map((e) => (
+          <p key={e.id}>{e.name}</p>
+        ))}
       </article>
     </main>
   );
