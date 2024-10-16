@@ -1,0 +1,52 @@
+@use "../utilities/mixin" as *;
+@use "../utilities/variables" as *;
+
+.header {
+  @include overlay(#000000ce);
+  background-image: url("/src/assets/headerDesktop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+
+  &-main {
+    @include default-size;
+    @include flexbox(column, nowrap, normal, normal);
+    gap: 1rem;
+    position: relative;
+  }
+
+  &__nav {
+    @include flexbox(row, nowrap, space-between, center);
+    width: 100%;
+
+    &-github {
+      @include flexbox(row, nowrap, normal, center);
+      gap: 0.5rem;
+    }
+  }
+
+  &__info {
+    @include flexbox(row, wrap, center, center);
+    gap: 1rem;
+    padding: 2rem;
+  }
+
+  &__title {
+    font-family: "Space Ranger Outline", sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    color: $main;
+    text-shadow: 1px 2px 3px $secondary, 1px 1px 3px $main;
+  }
+  &__text {
+    color: $white;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    background-image: url("/src/assets/headerMobile.jpg");
+  }
+}

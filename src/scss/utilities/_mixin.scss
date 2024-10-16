@@ -1,8 +1,27 @@
-@mixin flex($direction, $wrap, $just, $align) {
+@mixin flexbox($direction, $wrap, $just, $align) {
   display: flex;
   flex-flow: $direction $wrap;
   justify-content: $just;
   align-items: $align;
+}
+
+@mixin default-size() {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+@mixin overlay($color) {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $color;
+  }
 }
 
 @mixin scroll($color, $bg, $margin) {

@@ -1,7 +1,9 @@
+import Header from "./components/layout/header";
+
 const App = (): JSX.Element => {
   return (
     <>
-      <h1>Website</h1>
+      <Header />
     </>
   );
 };
