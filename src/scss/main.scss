@@ -9,14 +9,3 @@
 // Utilities
 @use "./utilities/mixin" as *;
 @use "./utilities/variables" as *;
-
-body {
-  background-size: cover;
-  color: $white;
-  min-height: 200vh;
-}
-
-.bg-shadow {
-  background-color: #000000bd;
-  min-height: 100vh;
-}
