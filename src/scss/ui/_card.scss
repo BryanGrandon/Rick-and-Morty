@@ -1,0 +1,30 @@
+@use "../utilities/mixin" as *;
+@use "../utilities/variables" as *;
+
+.card {
+  cursor: pointer;
+  border-radius: 1rem;
+  overflow: hidden;
+  width: 11rem;
+  height: 11rem;
+  box-shadow: 2px 2px 5px $stroke;
+  position: relative;
+
+  &__title {
+    position: absolute;
+    inset: auto 0 0 0;
+    font-family: "Space Ranger", sans-serif;
+    color: $white;
+    text-align: center;
+    padding: 0.1rem 0;
+    font-size: 1.1rem;
+    background-color: #0000008e;
+  }
+
+  &:hover &__title {
+    @include flexbox(row, nowrap, center, end);
+    inset: 0;
+    text-shadow: 2px 2px 4px $stroke;
+    color: $main;
+  }
+}

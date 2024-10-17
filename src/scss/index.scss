@@ -7,6 +7,9 @@
 @use "./layout/header";
 @use "./layout/main-article";
 
+// UI
+@use "./ui/card";
+
 // Utilities
 @use "./utilities/mixin" as *;
 @use "./utilities/variables" as *;

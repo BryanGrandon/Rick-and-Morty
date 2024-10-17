@@ -1,6 +1,7 @@
 // import React from "react";
 
 import { useSeriesContext } from "../../context/series-context";
+import Card from "../ui/card";
 
 const MainArticle = () => {
   const { characters } = useSeriesContext();
@@ -12,7 +13,7 @@ const MainArticle = () => {
 
       <article>
         {characters.map((e) => (
-          <p key={e.id}>{e.name}</p>
+          <Card key={e.id} info={e} />
         ))}
       </article>
     </main>

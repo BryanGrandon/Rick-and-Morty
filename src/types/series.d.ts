@@ -6,6 +6,7 @@ interface SeriesI {
   status: string;
   origin: string;
   location: string;
+  image: string;
 }
 
 type PrevNext = { prev: boolean; next: boolean };
