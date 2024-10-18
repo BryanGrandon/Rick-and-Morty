@@ -1,0 +1,98 @@
+@use "../utilities/mixin" as *;
+@use "../utilities/variables" as *;
+
+.modal {
+  @include flexbox(row, nowrap, center, center);
+  background-color: #000000d2;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  position: fixed;
+  inset: 0;
+
+  &__card {
+    background-image: url("https://images.pexels.com/photos/1694000/pexels-photo-1694000.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-position: center;
+    @include flexbox(column, nowrap, center, center);
+    gap: 1.5rem;
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+    border: 1px solid $main;
+    position: relative;
+    color: $white;
+
+    &-header {
+      @include flexbox(row, nowrap, space-between, center);
+      width: 100%;
+    }
+
+    &-img {
+      border-radius: 50%;
+      max-width: 14rem;
+      filter: drop-shadow(2px 2px 5px $secondary);
+    }
+
+    &-name {
+      font-size: 1.2rem;
+      font-family: $source-of-title;
+      letter-spacing: 1px;
+    }
+
+    &-info {
+      @include flexbox(column, wrap, normal, normal);
+      color: $secondary;
+      gap: 0.5rem;
+      width: 100%;
+    }
+
+    &-btn {
+      cursor: pointer;
+      border: 1px solid red;
+      padding: 0.4rem;
+      font-size: 1.5rem;
+      border-radius: 50%;
+      &:hover {
+        background-color: red;
+      }
+    }
+  }
+}
+
+.card-header {
+  &__status {
+    @include flexbox(row, nowrap, normal, center);
+    gap: 0.5rem;
+
+    &-Alive {
+      color: $main;
+    }
+
+    &-Dead {
+      color: red;
+    }
+  }
+}
+
+.card-info {
+  &__gender {
+    @include flexbox(row, wrap, normal, normal);
+
+    gap: 0.4rem;
+    &::before {
+      content: "Gender: ";
+      color: #a5a5a5;
+    }
+  }
+  &__location {
+    &::before {
+      content: "Location: ";
+      color: #a5a5a5;
+    }
+  }
+  &__origin {
+    &::before {
+      content: "Origin: ";
+      color: #a5a5a5;
+    }
+  }
+}
