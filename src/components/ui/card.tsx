@@ -1,15 +1,18 @@
 // import React from "react";
+import { useSeriesContext } from "../../context/series-context";
 import { SeriesI } from "../../types/series";
 
 type Props = {
-  info: SeriesI;
+  character: SeriesI;
 };
 
-const Card = ({ info }: Props) => {
+const Card = ({ character }: Props) => {
+  const { modifyModal } = useSeriesContext();
+
   return (
-    <section className="card">
-      <img src={info.image} alt="" className="card__img" />
-      <p className="card__title">{info.name}</p>
+    <section className="card" onClick={() => modifyModal(character, true)}>
+      <img src={character.image} alt="" className="card__img" />
+      <p className="card__title">{character.name}</p>
     </section>
   );
 };
