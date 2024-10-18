@@ -13,7 +13,7 @@ const MainArticle = () => {
         <h2>Filter</h2>
       </article>
 
-      <article>
+      <article className="main-article__characters">
         {characters.map((e) => (
           <Card key={e.id} character={e} />
         ))}

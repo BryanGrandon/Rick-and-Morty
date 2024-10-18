@@ -5,8 +5,8 @@
   cursor: pointer;
   border-radius: 1rem;
   overflow: hidden;
-  width: 11rem;
-  height: 11rem;
+  width: 12rem;
+  height: 12rem;
   box-shadow: 2px 2px 5px $stroke;
   position: relative;
 
@@ -16,14 +16,16 @@
     font-family: "Space Ranger", sans-serif;
     color: $white;
     text-align: center;
-    padding: 0.1rem 0;
+    padding: 0.1rem 0.5rem;
     font-size: 1.1rem;
     background-color: #0000008e;
   }
 
+  &:hover {
+    box-shadow: 2px 2px 6px $main;
+  }
   &:hover &__title {
     @include flexbox(row, nowrap, center, end);
-    inset: 0;
     text-shadow: 2px 2px 4px $stroke;
     color: $main;
   }

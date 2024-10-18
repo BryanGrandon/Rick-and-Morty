@@ -2,8 +2,14 @@
 @use "../utilities/variables" as *;
 
 .main-article {
-  @include default-size();
-  border: 1px solid #f00;
-  display: grid;
-  grid-template-columns: 20rem 1fr;
+  background-image: url("https://images.pexels.com/photos/1694000/pexels-photo-1694000.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: center;
+  @include overlay(#0000008e);
+
+  &__characters {
+    position: relative;
+    @include default-size();
+    @include flexbox(row, wrap, space-evenly, center);
+    gap: 1rem;
+  }
 }
