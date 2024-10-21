@@ -1,6 +1,7 @@
 import React from "react";
 import { SeriesContextType, SeriesI, PrevNext, Modal } from "../types/series";
 import { getApiInfo } from "../services/getApi";
+import { URL_Characters } from "../services/constants/urls";
 
 const SeriesContext = React.createContext<SeriesContextType | null>(null);
 
@@ -28,36 +29,35 @@ export const SeriesContextProvider = ({ children }: Props) => {
     isOpen: false,
   });
 
-  const [urlNext, setUrlNext] = React.useState<string>("");
-  const [urlPrev, setUrlPrev] = React.useState<string>("");
-
   const [prevNext, setPrevNext] = React.useState<PrevNext>({
-    prev: false,
-    next: true,
+    prev: {
+      status: false,
+      url: "",
+    },
+    next: { status: false, url: "" },
   });
 
-  const getInfo = async (url: string) => {
+  const getInfoApi = async (url: string) => {
     const json = await getApiInfo(url);
     setCharacters(json.results);
-    setUrlNext(json.info.next ? json.info.next : "");
-    setUrlPrev(json.info.prev ? json.info.prev : "");
     setPrevNext({
-      prev: json.info.prev ? true : false,
-      next: json.info.next ? true : false,
+      prev: {
+        status: json.info.prev ? true : false,
+        url: json.info.prev ? json.info.prev : "",
+      },
+      next: {
+        status: json.info.next ? true : false,
+        url: json.info.next ? json.info.next : "",
+      },
     });
   };
 
   React.useEffect(() => {
-    getInfo("https://rickandmortyapi.com/api/character");
+    getInfoApi(URL_Characters);
   }, []);
 
   const modifyModal = (character: SeriesI, isOpen: boolean): void => {
     setModal({ character, isOpen });
-  };
-
-  const handlerClickSeries = (option: string) => {
-    let url: string = option == "next" ? urlNext : urlPrev;
-    getInfo(url);
   };
 
   return (
@@ -65,7 +65,7 @@ export const SeriesContextProvider = ({ children }: Props) => {
       value={{
         characters,
         prevNext,
-        handlerClickSeries,
+        getInfoApi,
         modifyModal,
         modal,
       }}

@@ -9,7 +9,10 @@ interface SeriesI {
   image: string;
 }
 
-type PrevNext = { prev: boolean; next: boolean };
+type PrevNext = {
+  prev: { status: boolean; url: string };
+  next: { status: boolean; url: string };
+};
 type Modal = { character: SeriesI; isOpen: boolean };
 
 type SeriesContextType = {
@@ -17,7 +20,7 @@ type SeriesContextType = {
   prevNext: PrevNext;
   modal: Modal;
   modifyModal: (option: SeriesI, isOpen: boolean) => void;
-  handlerClickSeries: (option: string) => void;
+  getInfoApi: (url: string) => void;
 };
 
 export { SeriesContextType, SeriesI, PrevNext, Modal };
