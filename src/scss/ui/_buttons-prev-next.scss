@@ -1,0 +1,25 @@
+@use "../utilities/mixin" as *;
+@use "../utilities/variables" as *;
+
+.prev-next {
+  @include flexbox(row, nowrap, space-between, center);
+  width: 100%;
+  gap: 1.5rem;
+
+  &__btn {
+    @include flexbox(row, nowrap, normal, center);
+    gap: 0.2rem;
+    background-color: $black;
+    color: $main;
+    font-weight: bold;
+    transition: color 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+      color: $secondary;
+    }
+  }
+  &__arrows {
+    font-size: 1.6rem;
+  }
+}

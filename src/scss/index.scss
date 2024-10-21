@@ -10,6 +10,7 @@
 // UI
 @use "./ui/card";
 @use "./ui/modal-characters";
+@use "./ui/buttons-prev-next";
 
 // Utilities
 @use "./utilities/mixin" as *;
