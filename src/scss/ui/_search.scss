@@ -4,14 +4,13 @@
 .search {
   @include flexbox(row, nowrap, normal, center);
   background-color: $black;
-  border-radius: 1rem;
+  border-radius: 0.3rem;
   overflow: hidden;
   padding: 0 0.5rem;
-  outline: 1Q solid $secondary;
-  box-shadow: 2px 2px 4px $secondary;
+  border: 1px solid $filter;
 
   &__input {
-    padding: 0.2rem 0.5rem;
+    padding: 0.3rem 0.5rem;
     color: $white;
     width: 100%;
   }

@@ -5,8 +5,6 @@
   cursor: pointer;
   border-radius: 1rem;
   overflow: hidden;
-  width: 12rem;
-  height: 12rem;
   box-shadow: 2px 2px 5px $stroke;
   position: relative;
 
@@ -19,14 +17,14 @@
     padding: 0.1rem 0.5rem;
     font-size: 1.1rem;
     background-color: #0000008e;
+    letter-spacing: 1px;
   }
 
   &:hover {
-    box-shadow: 2px 2px 6px $main;
+    outline: 2px solid $main;
   }
   &:hover &__title {
     @include flexbox(row, nowrap, center, end);
-    text-shadow: 2px 2px 4px $stroke;
     color: $main;
   }
 }
