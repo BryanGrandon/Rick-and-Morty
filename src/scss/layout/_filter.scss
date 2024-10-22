@@ -2,8 +2,9 @@
 @use "../utilities/variables" as *;
 
 .filter {
-  position: relative;
   @include default-size();
-  @include flexbox(row, wrap, center, center);
-  height: 5rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: 1rem;
 }

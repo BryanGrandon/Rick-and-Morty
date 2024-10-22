@@ -37,6 +37,7 @@ const Dropdown = ({
     setSelected(element);
     handlerSubmit(element);
   };
+
   return (
     <article className="dropdown">
       <section

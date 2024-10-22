@@ -15,7 +15,7 @@ const MainArticle = () => {
         <ButtonsPrevNext />
 
         {characters ? (
-          <article className="main-article__characters">
+          <article className="main-article__cards">
             {characters.map((e) => (
               <Card key={e.id} character={e} />
             ))}
