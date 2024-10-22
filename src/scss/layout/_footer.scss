@@ -1,0 +1,25 @@
+@use "../utilities/mixin" as *;
+@use "../utilities/variables" as *;
+
+.footer {
+  @include flexbox(column, nowrap, center, center);
+  background-color: $black;
+  border-top: 1px solid $main;
+  gap: 1rem;
+  min-height: 10rem;
+
+  &__text {
+    max-width: 1200px;
+    text-align: center;
+    color: #a3a3a3;
+  }
+  &__social {
+    @include flexbox(row, nowrap, normal, center);
+    gap: 1.5rem;
+
+    &-icon {
+      font-size: 1.2rem;
+      color: $secondary;
+    }
+  }
+}
