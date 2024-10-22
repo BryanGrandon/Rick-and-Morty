@@ -4,6 +4,18 @@ This website will show all the characters from the Rick and Morty series showing
 
 ## ⚙️ Function of the website
 
+- You can filter rick and morty characters using some of the following ways.
+  1. status: Indicates whether alive, dead or unknown.
+  2. Gender: Indicates if male, female, genderless or unknown.
+  3. Search name: Adding a name will search for all characters in the series that contain that name.
+- The character card allows you to view certain information about the character.
+
+  <img src="./public/character-card.png" alt="Pokemon-card" width="200px" />
+
+  When you click on the character's card, a modal will appear where you can see more information about the character.
+
+   <img src="./public/modal.png" alt="pokemon" width="550px"  />
+
 ## 🚀 Technologies and tools used
 
 - [ReactJS](https://es.react.dev/)
