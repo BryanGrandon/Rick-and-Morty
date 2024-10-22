@@ -30,26 +30,36 @@ export const SeriesContextProvider = ({ children }: Props) => {
   });
 
   const [prevNext, setPrevNext] = React.useState<PrevNext>({
-    prev: {
-      status: false,
-      url: "",
-    },
+    prev: { status: false, url: "" },
     next: { status: false, url: "" },
   });
 
   const getInfoApi = async (url: string) => {
-    const json = await getApiInfo(url);
-    setCharacters(json.results);
-    setPrevNext({
-      prev: {
-        status: json.info.prev ? true : false,
-        url: json.info.prev ? json.info.prev : "",
-      },
-      next: {
-        status: json.info.next ? true : false,
-        url: json.info.next ? json.info.next : "",
-      },
-    });
+    try {
+      const json = await getApiInfo(url);
+      setCharacters(json.results);
+      setPrevNext({
+        prev: {
+          status: json.info.prev ? true : false,
+          url: json.info.prev ? json.info.prev : "",
+        },
+        next: {
+          status: json.info.next ? true : false,
+          url: json.info.next ? json.info.next : "",
+        },
+      });
+    } catch (error) {
+      setPrevNext({
+        prev: {
+          status: false,
+          url: "",
+        },
+        next: {
+          status: false,
+          url: "",
+        },
+      });
+    }
   };
 
   React.useEffect(() => {

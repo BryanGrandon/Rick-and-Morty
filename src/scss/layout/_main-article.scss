@@ -12,4 +12,9 @@
     @include flexbox(row, wrap, space-evenly, center);
     gap: 1rem;
   }
+  &__search {
+    position: relative;
+    @include default-size();
+    @include flexbox(row, wrap, center, center);
+  }
 }

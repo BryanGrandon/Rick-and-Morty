@@ -1,0 +1,49 @@
+@use "../utilities/mixin" as *;
+@use "../utilities/variables" as *;
+
+.search {
+  @include flexbox(row, nowrap, normal, center);
+  background-color: $black;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 0 0.5rem;
+  outline: 1Q solid $secondary;
+  box-shadow: 2px 2px 4px $secondary;
+
+  &__input {
+    padding: 0.2rem 0.5rem;
+    color: $white;
+    width: 100%;
+  }
+  &__buttons {
+    @include flexbox(row, nowrap, normal, center);
+    gap: 0.5rem;
+
+    &-btn {
+      font-size: 1.1rem;
+      padding: 0.3rem;
+    }
+  }
+}
+
+.button {
+  &-close {
+    color: #949494;
+    border-radius: 1rem;
+    &:hover {
+      cursor: pointer;
+      color: red;
+    }
+  }
+  &-search {
+    cursor: pointer;
+    &:hover {
+      color: $main;
+    }
+  }
+}
+
+.icon-transparent {
+  color: transparent;
+  cursor: auto;
+}

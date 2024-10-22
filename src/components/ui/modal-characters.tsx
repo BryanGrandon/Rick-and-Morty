@@ -51,7 +51,7 @@ const ModalCharacters = () => {
             {genderType(character.gender)}
           </p>
           <p className="card-info__location">{character.location.name}</p>
-          <p className="card-info__origin">Origin: {character.origin.name}</p>
+          <p className="card-info__origin">{character.origin.name}</p>
         </section>
         <button
           className="modal__card-btn"
