@@ -1,35 +1,28 @@
 import React from "react";
-import { useSeriesContext } from "../../context/series-context";
-import { URL_Characters } from "../../services/constants/urls";
 // Icons
 import { FaSearch } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 
-type Props = {
-  value: string;
+type Search = {
   placeholder: string;
-  handlerSubmit: () => void;
+  handlerSubmit: (value: string) => void;
   handlerClose: () => void;
-  handlerChangeValue: () => void;
 };
 
-const Search = () => {
+const Search = ({ placeholder, handlerSubmit, handlerClose }: Search) => {
   const [characterName, setCharacterName] = React.useState<string>("");
-  const { getInfoApi } = useSeriesContext();
-  const handlerSubmit = () => {
-    getInfoApi(URL_Characters + `?name=${characterName}`);
-  };
+
   return (
     <section
       className="search"
       onKeyDown={(e) => {
-        if (e.key == "Enter") handlerSubmit();
+        if (e.key == "Enter") handlerSubmit(characterName);
       }}
     >
       <input
         type="text"
         className="search__input"
-        placeholder="Character Name..."
+        placeholder={placeholder}
         onChange={(e) => setCharacterName(e.target.value)}
         value={characterName}
       />
@@ -40,14 +33,14 @@ const Search = () => {
           }`}
           onClick={() => {
             setCharacterName("");
-            getInfoApi(URL_Characters);
+            handlerClose();
           }}
         >
           <IoClose />
         </button>
         <button
           className="search__buttons-btn button-search"
-          onClick={() => handlerSubmit()}
+          onClick={() => handlerSubmit(characterName)}
         >
           <FaSearch />
         </button>

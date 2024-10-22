@@ -1,0 +1,9 @@
+@use "../utilities/mixin" as *;
+@use "../utilities/variables" as *;
+
+.filter {
+  position: relative;
+  @include default-size();
+  @include flexbox(row, wrap, center, center);
+  height: 5rem;
+}

@@ -2,16 +2,14 @@ import { useSeriesContext } from "../../context/series-context";
 import ButtonsPrevNext from "../ui/buttons-prev-next";
 import Card from "../ui/card";
 import ModalCharacters from "../ui/modal-characters";
-import Search from "../ui/search";
+import Filter from "./filter";
 
 const MainArticle = () => {
   const { modal, characters } = useSeriesContext();
 
   return (
     <main className="main-article">
-      <article className="main-article__search">
-        <Search />
-      </article>
+      <Filter />
 
       <article className="main-article__characters">
         <ButtonsPrevNext />
