@@ -2,6 +2,7 @@
 @use "./base/reset-styles";
 @use "./base/typography";
 @use "./base/base";
+@use "./base/media-queries";
 
 // Layout
 @use "./layout/header";
@@ -13,6 +14,7 @@
 @use "./ui/modal-characters";
 @use "./ui/buttons-prev-next";
 @use "./ui/search";
+@use "./ui/dropdown";
 
 // Utilities
 @use "./utilities/mixin" as *;
