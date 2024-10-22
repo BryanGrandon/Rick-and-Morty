@@ -1,0 +1,11 @@
+@use "../utilities/mixin" as *;
+@use "../utilities/variables" as *;
+
+.no-results-found {
+  @include flexbox(row, wrap, center, center);
+  font-size: 1.5rem;
+  font-family: $source-of-title;
+  text-align: center;
+  letter-spacing: 2px;
+  min-height: 10rem;
+}

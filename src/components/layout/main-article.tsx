@@ -2,6 +2,7 @@ import { useSeriesContext } from "../../context/series-context";
 import ButtonsPrevNext from "../ui/buttons-prev-next";
 import Card from "../ui/card";
 import ModalCharacters from "../ui/modal-characters";
+import NoResultsFound from "../ui/no-results-found";
 import Filter from "./filter";
 
 const MainArticle = () => {
@@ -21,7 +22,7 @@ const MainArticle = () => {
             ))}
           </article>
         ) : (
-          <article>No results found</article>
+          <NoResultsFound />
         )}
 
         <ButtonsPrevNext />
