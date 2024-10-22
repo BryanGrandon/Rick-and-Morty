@@ -10,11 +10,11 @@ This website will show all the characters from the Rick and Morty series showing
   3. Search name: Adding a name will search for all characters in the series that contain that name.
 - The character card allows you to view certain information about the character.
 
-  <img src="./public/character-card.png" alt="Pokemon-card" width="200px" />
+  <img src="./public/character-card.png" alt="character-card" width="200px" />
 
   When you click on the character's card, a modal will appear where you can see more information about the character.
 
-   <img src="./public/modal.png" alt="pokemon" width="550px"  />
+   <img src="./public/modal.png" alt="character-modal" width="350px"  />
 
 ## 🚀 Technologies and tools used
 
@@ -30,10 +30,10 @@ This website will show all the characters from the Rick and Morty series showing
 
 ## 📊 Project status
 
-| Status         | Start date | End date |
-| -------------- | ---------- | -------- |
-| ⌛ In progress | 2024-10-15 |          |
+| Status      | Start date | End date   |
+| ----------- | ---------- | ---------- |
+| ✅ Complete | 2024-10-15 | 2024-10-22 |
 
-## 🌐 [Website]()
+## 🌐 [Website](https://bryangrandon.github.io/Rick-and-Morty/)
 
-<!-- <img src="./src/assets/website.png" alt="website" width="900px" /> -->
+<img src="./public/website.png" alt="website" width="900px" />
