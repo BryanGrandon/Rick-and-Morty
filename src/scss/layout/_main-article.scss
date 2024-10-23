@@ -5,16 +5,14 @@
   background-image: url("https://images.pexels.com/photos/1694000/pexels-photo-1694000.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-position: center;
   @include overlay(#0000008e);
-  padding: 2rem 0;
+  padding: 2rem;
 
   &__characters {
     position: relative;
-    @include default-size();
     display: grid;
     gap: 1.5rem;
   }
   &__cards {
-    width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
     gap: 1.5rem;

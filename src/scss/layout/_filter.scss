@@ -2,9 +2,15 @@
 @use "../utilities/variables" as *;
 
 .filter {
-  @include default-size();
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
-  gap: 1rem;
+  padding: 1rem 0;
+
+  &-main {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    row-gap: 1rem;
+    column-gap: 2rem;
+  }
 }

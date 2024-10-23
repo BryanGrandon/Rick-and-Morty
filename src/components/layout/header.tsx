@@ -4,7 +4,7 @@ const Header = (): JSX.Element => {
     <header className="header">
       <article className="header-main">
         <nav className="header__nav">
-          <a href="https://rickandmortyapi.com/" target="__blank">
+          <a href="#" target="__blank">
             <svg
               width="40"
               height="40"

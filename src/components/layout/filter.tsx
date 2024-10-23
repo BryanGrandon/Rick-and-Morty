@@ -48,21 +48,23 @@ const Filter = () => {
 
   return (
     <article className="filter">
-      <Dropdown
-        title="Status:"
-        arrayElements={statusArray}
-        handlerSubmit={(status) => handlerClickStatus(status)}
-      />
-      <Dropdown
-        title="Gender:"
-        arrayElements={genderArray}
-        handlerSubmit={(gender) => handlerClickGender(gender)}
-      />
-      <Search
-        placeholder="Character Name..."
-        handlerSubmit={handlerSubmitSearch}
-        handlerClose={() => handlerSubmitSearch("")}
-      />
+      <article className="filter-main">
+        <Dropdown
+          title="Status:"
+          arrayElements={statusArray}
+          handlerSubmit={(status) => handlerClickStatus(status)}
+        />
+        <Dropdown
+          title="Gender:"
+          arrayElements={genderArray}
+          handlerSubmit={(gender) => handlerClickGender(gender)}
+        />
+        <Search
+          placeholder="Character Name..."
+          handlerSubmit={handlerSubmitSearch}
+          handlerClose={() => handlerSubmitSearch("")}
+        />
+      </article>
     </article>
   );
 };

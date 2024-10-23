@@ -1,39 +1,44 @@
 # Rick and Morty
 
-This website will show all the characters from the Rick and Morty series showing detailed information and more.
+Find your favorite characters from the Rick and Morty series with their respective information that may surprise you.
 
-## ⚙️ Function of the website
+- [The Rick and Morty API.](https://rickandmortyapi.com/)
+- [🌐 Website Demo.](https://bryangrandon.github.io/Rick-and-Morty/)
 
-- You can filter rick and morty characters using some of the following ways.
-  1. status: Indicates whether alive, dead or unknown.
-  2. Gender: Indicates if male, female, genderless or unknown.
-  3. Search name: Adding a name will search for all characters in the series that contain that name.
-- The character card allows you to view certain information about the character.
+## 📚 Technologies Used
 
-  <img src="./public/character-card.png" alt="character-card" width="200px" />
+[![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)](https://react.dev/)
+[![TS](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=fff)](https://vite.dev/)
+[![sass](https://img.shields.io/badge/Sass-CC6699?style=flat&logo=sass&logoColor=white)](https://sass-lang.com/)
+[!["React-icons"](https://img.shields.io/badge/React_icons-2D3136.svg?style=flat&logo=react&logoColor=white)](https://www.npmjs.com/package/react-icons)
 
-  When you click on the character's card, a modal will appear where you can see more information about the character.
+## ⚙️ Installation
 
-   <img src="./public/modal.png" alt="character-modal" width="350px"  />
+Clone the repository:
 
-## 🚀 Technologies and tools used
+```bash
+git clone https://github.com/BryanGrandon/Rick-and-Morty.git
+```
 
-- [ReactJS](https://es.react.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Vite](https://vitejs.dev/)
-- [The Rick and Morty API](https://rickandmortyapi.com/)
+Access the project folder
 
-### Dependencies
+```bash
+cd Rick-and-Morty
+```
 
-- [sass](https://sass-lang.com/)
-- [React-icons](https://www.npmjs.com/package/react-icons)
+Install all the project dependencies with:
 
-## 📊 Project status
+```bash
+npm install
+```
 
-| Status      | Start date | End date   |
-| ----------- | ---------- | ---------- |
-| ✅ Complete | 2024-10-15 | 2024-10-22 |
+And start the development server with:
 
-## 🌐 [Website](https://bryangrandon.github.io/Rick-and-Morty/)
+```bash
+npm run dev
+```
 
-<img src="./public/website.png" alt="website" width="900px" />
+## License
+
+See the [LICENSE](/LICENSE.MD) file for license rights and limitations (MIT).

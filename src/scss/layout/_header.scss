@@ -8,9 +8,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
+  padding: 1rem 2rem;
 
   &-main {
-    @include default-size;
     @include flexbox(column, nowrap, normal, normal);
     position: relative;
   }
