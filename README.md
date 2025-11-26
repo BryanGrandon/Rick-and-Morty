@@ -1,8 +1,8 @@
 # Rick and Morty
 
-Find your favorite characters from the Rick and Morty series with their respective information that may surprise you.
+Rick and Morty is a website for quickly exploring characters, locations, and facts from the series in a visual way.
 
-- [The Rick and Morty API.](https://rickandmortyapi.com/)
+- [API.](https://rickandmortyapi.com/)
 - [🌐 Website Demo.](https://bryangrandon.github.io/Rick-and-Morty/)
 
 ## 📚 Technologies Used
